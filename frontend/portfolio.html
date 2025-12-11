@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vincere – Portfólio</title>
+    <link rel="icon" type="image/png" href="assets/logo_favicon.png" />
+    <meta name="description" content="Projetos realizados pela Vincere." />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body data-page="portfolio">
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Vincere — Início">
+                <img src="assets/logo.svg" alt="Vincere" onerror="this.onerror=null;this.src='assets/logo.png'">
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-controls="menu" aria-expanded="false"
+                aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="menu" id="menu">
+                <a href="index.html" data-nav="inicio">Início</a>
+                <a href="servicos.html" data-nav="servicos">Serviços</a>
+                <a href="portfolio.html" data-nav="portfolio">Portfólio</a>
+                <a href="sobre.html" data-nav="sobre">Sobre</a>
+                <a href="contato.html" class="btn" data-nav="contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Portfólio</h1>
+                <p class="muted">Alguns dos projetos que transformaram negócios.</p>
+
+                <div id="proj-filters" class="toolbar"></div>
+                <div id="projects-empty" class="muted" hidden>Nenhum projeto encontrado.</div>
+                <div id="projects-grid" class="grid-3"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Vincere. Todos os direitos reservados.</span>
+
+            <div class="footer-links">
+                <a href="contato.html">Contato</a>
+                <a href="https://www.instagram.com/vincerebr/" target="_blank" rel="noopener"
+                    aria-label="Instagram da Vincere">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/site.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
+</body>
+
+</html>

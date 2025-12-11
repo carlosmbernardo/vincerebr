@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vincere – Contato</title>
+    <link rel="icon" type="image/png" href="assets/logo_favicon.png" />
+    <meta name="description" content="Fale com a Vincere. Vamos conversar sobre seu projeto." />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body data-page="contato">
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Vincere — Início">
+                <img src="assets/logo.svg" alt="Vincere" onerror="this.onerror=null;this.src='assets/logo.png'">
+            </a>
+            <nav class="menu">
+                <a href="index.html" data-nav="inicio">Início</a>
+                <a href="servicos.html" data-nav="servicos">Serviços</a>
+                <a href="portfolio.html" data-nav="portfolio">Portfólio</a>
+                <a href="sobre.html" data-nav="sobre">Sobre</a>
+                <a href="contato.html" class="btn" data-nav="contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Contato</h1>
+
+                <form id="contact-form" class="form" autocomplete="on" novalidate>
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" name="nome" class="input" placeholder="Seu nome" inputmode="text"
+                        autocomplete="name" pattern="[A-Za-zÀ-ÖØ-öø-ÿ'´`^~çÇ\s-]{2,}" required />
+
+                    <label for="email">Seu e-mail</label>
+                    <input id="email" name="email" class="input" type="email" placeholder="Seu e-mail"
+                        autocomplete="email" required />
+
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" class="input" inputmode="tel" placeholder="Telefone"
+                        autocomplete="tel" />
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" class="input" rows="6" placeholder="Como podemos ajudar?"
+                        required></textarea>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-dark">Enviar</button>
+                        <a id="cta-whatsapp" class="btn" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+
+                        <span id="form-ok" class="ok" hidden>Recebemos sua mensagem. Obrigado!</span>
+                        <span id="form-err" class="err" hidden>Confira os campos e tente novamente.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Vincere. Todos os direitos reservados.</span>
+
+            <div class="footer-links">
+                <a href="contato.html">Contato</a>
+                <a href="https://www.instagram.com/vincerebr/" target="_blank" rel="noopener"
+                    aria-label="Instagram da Vincere">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/site.js" defer></script>
+    <script src="js/contato.js" defer></script>
+</body>
+
+</html>

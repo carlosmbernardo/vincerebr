@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vincere – Início</title>
+  <link rel="icon" type="image/png" href="assets/logo_favicon.png" />
+  <meta name="description" content="Marketing digital que gera resultado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body data-page="inicio">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Vincere — Início">
+        <img src="assets/logo.svg" alt="Vincere" onerror="this.onerror=null;this.src='assets/logo.png'">
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="servicos.html" data-nav="servicos">Serviços</a>
+        <a href="portfolio.html" data-nav="portfolio">Portfólio</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="contato.html" class="btn" data-nav="contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container grid-2">
+        <div>
+          <h1 class="headline-xl">Marketing digital que <span class="under">gera resultado</span></h1>
+          <p>Branding profissional e campanhas que convertem.</p>
+          <div class="actions">
+            <a href="contato.html" class="btn btn-dark">Solicitar proposta</a>
+            <a href="portfolio.html" class="btn btn-accent">Ver portfólio</a>
+          </div>
+        </div>
+
+        <div class="ph aspect hero-media" style="background-image:url('assets/perfil.png')" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- PROJETOS EM DESTAQUE-->
+    <section class="section brand" id="projetos-destaque">
+      <div class="container">
+        <h2>Projetos em destaque</h2>
+
+        <!-- Carrossel de destaque-->
+        <div class="pc-root" id="pc-root" aria-label="Carrossel de projetos em destaque">
+          <article class="pc-card" id="pc-card">
+            <div class="pc-media" id="pc-media" aria-hidden="true"></div>
+
+            <div class="pc-content">
+              <h3 class="pc-title" id="pc-title"></h3>
+              <p class="pc-desc" id="pc-desc"></p>
+
+              <div class="tags" id="pc-tags"></div>
+
+              <div class="actions">
+                <a id="pc-link" href="#" target="_blank" rel="noopener" class="btn btn-cta">Ver projeto</a>
+              </div>
+            </div>
+
+            <button class="pc-nav pc-prev" id="pc-prev" aria-label="Anterior">‹</button>
+            <button class="pc-nav pc-next" id="pc-next" aria-label="Próximo">›</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="section" id="localizacao">
+      <div class="container">
+        <h2>Localização</h2>
+        <p class="muted">Vincere Digital Marketing – Rua Nossa Senhora da Paz, 275, Centro, Balneário Piçarras – SC</p>
+
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.145110421719!2d-48.67231902369189!3d-26.77164398732614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8d3fcdae57869%3A0x417ec001adb01e8b!2sVincere%20Digital%20Marketing!5e0!3m2!1spt-BR!2sbr!4v1764423091789!5m2!1spt-BR!2sbr"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vincere no Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Vincere. Todos os direitos reservados.</span>
+
+      <div class="footer-links">
+        <a href="contato.html">Contato</a>
+        <a href="https://www.instagram.com/vincerebr/" target="_blank" rel="noopener" aria-label="Instagram da Vincere">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="login.html" class="admin-link">Área administrativa</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts-->
+  <script src="js/config.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+
+</html>

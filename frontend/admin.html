@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vincere – Admin</title>
+  <link rel="icon" type="image/png" href="assets/logo_favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body data-page="contato">
+  <script>
+    if (sessionStorage.getItem("auth") !== "ok") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Vincere" onerror="this.onerror=null;this.src='assets/logo.png'">
+      </a>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html" class="btn">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Admin – Projetos</h1>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <form id="formProjeto" class="form">
+          <label for="titulo">Título</label>
+          <input id="titulo" class="input" required />
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" class="input" rows="4" required></textarea>
+
+          <label for="imagemUrl">URL da imagem (ou vídeo)</label>
+          <input id="imagemUrl" class="input" />
+
+          <label for="mediaFile">Upload de mídia (imagem/vídeo)</label>
+          <input id="mediaFile" class="input" type="file" accept="image/*,video/*" />
+
+          <div id="mediaPreview" class="ph" style="display:none; border-radius:16px; overflow:hidden;"></div>
+
+          <label for="link">Link do projeto</label>
+          <input id="link" class="input" />
+
+          <label for="tags">Tags (separadas por vírgula)</label>
+          <input id="tags" class="input" />
+
+          <div class="highlight-help">
+            <p>
+              Marque a opção abaixo para exibir este projeto na seção
+              <strong>"Projetos em destaque"</strong> da página inicial.
+            </p>
+            <label>
+              <input type="checkbox" id="destaque">
+            </label>
+          </div>
+
+          <label for="ordem">Ordem</label>
+          <input type="number" id="ordem" class="input" value="0" />
+
+          <div class="form-actions">
+            <button class="btn btn-dark" type="submit">Salvar projeto</button>
+          </div>
+        </form>
+
+        <!-- LISTA DE PROJETOS -->
+        <h2 style="margin-top:48px;">Projetos cadastrados</h2>
+        <div id="listaProjetos" class="grid-3" style="margin-top:20px;"></div>
+
+        <!-- LISTA DE LEADS -->
+        <h2 style="margin-top:48px;">Formulários Recebidos</h2>
+        <div id="listaLeads" style="margin-top:20px;"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Vincere</span>
+      <div class="footer-links">
+        <a href="contato.html">Contato</a>
+        <a href="https://www.instagram.com/vincerebr/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

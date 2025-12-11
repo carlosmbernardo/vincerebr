@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login Administrativo | Vincere</title>
+  <link rel="icon" type="image/png" href="assets/logo_favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body data-page="login">
+  <main>
+    <div class="login-box">
+      <h2>Área Administrativa</h2>
+      <p class="login-subtitle">Acesso exclusivo dos gestores Vincere</p>
+
+      <label for="user" class="login-label">Usuário</label>
+      <input id="user" type="text" autocomplete="username" class="login-input" />
+
+      <label for="pass" class="login-label">Senha</label>
+      <input id="pass" type="password" autocomplete="current-password" class="login-input" />
+
+      <button type="button" class="login-button" onclick="login()">Entrar</button>
+
+      <p id="error" class="login-error"></p>
+      <p class="login-hint">
+        Em caso de dúvida, fale com o suporte.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    function login() {
+      const user = document.getElementById("user").value.trim();
+      const pass = document.getElementById("pass").value.trim();
+
+      // USUÁRIO E SENHA ADMINISTRADOR
+      const adminUser = "vincere";
+      const adminPass = "2024";
+
+      if (user === adminUser && pass === adminPass) {
+        sessionStorage.setItem("auth", "ok");
+        window.location.href = "admin.html";
+      } else {
+        document.getElementById("error").textContent =
+          "Usuário ou senha incorretos.";
+      }
+    }
+
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter") login();
+    });
+  </script>
+</body>
+
+</html>
